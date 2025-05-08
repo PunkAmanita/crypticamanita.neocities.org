@@ -110,7 +110,7 @@ mark {
 
 /* Links: */
 a {
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 a,
@@ -122,6 +122,10 @@ a:hover,
 a:focus {
   color: var(--link-color-hover);
   text-decoration: none;
+transform: translateY(-11px);
+ transition: all 100ms ease;
+   transition-delay: 0ms;
+
 }
 
 /* -------------------------------------------------------- */
@@ -313,7 +317,8 @@ footer a:focus {
 /* -------------------------------------------------------- */
 
 nav {
-  margin-bottom: 3em;
+  margin-bottom: 3em; 
+  text-align: center
 }
 
 nav .sidebar-title {
@@ -325,6 +330,7 @@ nav ul {
   padding: 0;
   list-style: none;
   user-select: none;
+display: inline-block;
 }
 
 nav ul li {
@@ -386,27 +392,33 @@ header nav ul ul {
   display: none;
   position: absolute;
   top: 100%;
-  left: 15px;
   padding: 0.5em;
   z-index: 1;
-  border: var(--border);
   min-width: 100%;
   box-shadow: 10px 1px 5px rgba(0,0,0,0.2);
+text-align: center;
+text-decoration: none;
 }
 
-header nav ul li:hover ul,
+header nav ul li:hover ul, 
 header nav ul li:focus-within ul {
   display: block;
+transition: all 100ms ease;
+   transition-delay: 0ms;
+transform: translateY(-11px);
 }
+
 
 header nav ul li strong {
   color: var(--link-color);
-  text-decoration: underline;
+
   font-weight: normal;
+text-decoration: none;
 }
 
 header nav ul ul li a {
   display: block;
+text-decoration: none;
   padding-left: 0;
   padding-right: 0;
 }
