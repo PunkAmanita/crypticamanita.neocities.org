@@ -26,6 +26,7 @@ font-style: normal;
 
 
 
+
   
 /* -------------------------------------------------------- */
 /* VARIABLES */
@@ -74,6 +75,7 @@ font-style: normal;
     min-width:750px;
     max-width:1000px;
     margin:0 auto;
+    justify-content: center;
     padding-top:10px;
     position:relative;
       z-index:0
@@ -154,7 +156,7 @@ transform: translateY(-11px);
   width: 1200px;
   display: grid;
   grid-gap: var(--margin);
-  grid-template: "header header" auto "leftSidebar main" auto "footer footer" auto /  245px;
+  grid-template: "header header" auto "leftSidebar main" auto "footer footer" auto /  var(--sidebar-width) auto;
   /* Confused by the grid? Check out my tutorial: https://petrapixel.neocities.org/coding/positioning-tutorial#grid */
 }
 
@@ -331,6 +333,7 @@ nav ul {
   list-style: none;
   user-select: none;
 display: inline-block;
+text-align: center;
 }
 
 nav ul li {
@@ -340,17 +343,20 @@ nav ul li {
 nav > ul li > a,
 nav > ul li > strong {
   display: inline-block;
+text-align: center;
 }
 
 nav > ul li > a,
 nav > ul li > details summary,
 nav > ul li > strong {
   padding: 5px 15px;
+text-align: center;
 }
 
 nav > ul li > a.active,
 nav > ul li > details.active summary {
   font-weight: bold;
+text-align: center;
 }
 
 nav ul summary {
@@ -358,7 +364,7 @@ nav ul summary {
 }
 
 nav ul ul li > a {
-  padding-left: 30px;
+  padding:auto;
 }
 
 /* NAVIGATION IN HEADER */
@@ -423,22 +429,6 @@ text-decoration: none;
   padding-right: 0;
 }
 
-  #navbar {
-   height: 90px;
-   position: relative;
-   z-index: 1;
-   justify-content: center;
-   text-align: center;
-  }
-  
- .navbuttons {
-   display: inline-block;
-   transition: all 100ms ease;
-   transition-delay: 0ms;
-  }
-  .navbuttons:hover {
-   transform: translateY(-11px);
-  }
 
 /* -------------------------------------------------------- */
 /* CONTENT */
